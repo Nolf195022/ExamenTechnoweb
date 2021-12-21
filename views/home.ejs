@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/examen.css">
+    <title>Examen</title>
+    <script>
+        function calculate(){
+            width = document.getElementById("width").value;
+            length = document.getElementById("length").value;
+            if(width == "" || length == ""){
+                window.alert('Veilleur remplir les champs requis !')
+            }else{
+                message = "Surface : " + width*length + " m²";
+                document.getElementById("calc-result").innerHTML= message;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Encoder les données de la pièce</h1>
+        <form method="post" action="/createroom" autocomplete="off">
+            <div class="form-elements">
+                <label for="room">Pièce :</label>
+                <input type="text" name="room" required>
+                <label for="witdh">Largeur :</label>
+                <input type="number" name="width" id="width" required>
+                <label for="length">Longueur :</label>
+                <input type="number" name="length" id="length" min="1" required>
+            </div>
+            <input type="submit" name="save" value="Enregistrer">
+        </form>
+        <div id="calc-cont">
+            <button onclick="calculate()" id="calc-button">Calculer la surface</button>
+            <p id="calc-result"></p>
+        </div>
+    </div>
+</body>
+</html>

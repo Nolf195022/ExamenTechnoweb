@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/examen.css">
+    <title>Examen</title>
+    <script src="scripts/add.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Liste des pièces de l'appartement</h1>
+        <% totalsurface = 0 %> 
+        <% for(var i = 0 ; i < data.rooms.length ; i++) { %>
+            <% surface =  data.rooms[i].width*data.rooms[i].length%>
+            <% totalsurface += surface %> 
+            <div class="line">Pièce : <%= data.rooms[i].name %> <%= surface %> m²</div>
+            <% } %>
+            <div class="line lastline">Surface totale : <%= totalsurface %> m²</div>
+        <button onclick="location.href='/'">Encoder une autre pièce</button>
+    </div>
+</body>
+</html>

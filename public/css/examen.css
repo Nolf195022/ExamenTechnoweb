@@ -1,0 +1,43 @@
+button, input[type=submit] {
+        background-color: steelblue;
+        color:white;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+}
+#container {
+  width: 500px;
+  display: block;
+  font-family: Arial;
+  font-size: 12px;
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+.form-elements{
+  display: grid;
+  grid-template-columns: 60px 150px;
+  grid-gap: 10px;
+  margin-bottom: 2px;
+}
+#calc-cont{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.line{
+  width: 95%;
+  background-color: lightgrey;
+  padding: 5px;
+  margin: 5px;
+}
+
+.lastline{
+  background-color: lightblue;
+}
+
+
+
